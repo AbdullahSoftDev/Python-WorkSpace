@@ -1,0 +1,18 @@
+
+import matplotlib.pyplot as plt
+import pandas as pd
+df=pd.read_csv(r"C:/Users/Abdullah/.spyder-py3/Codes/Students.csv",low_memory=False)
+df['Average']=df[['Big data','DBMS','Data structures']].mean(axis=1)
+df.rename(columns={'Unnamed: 0':'Index'},inplace=True)
+print(df['Average'])
+top_score=df.loc[df['Average'].idxmax()]
+print(top_score.map('{:.1f}'.format))
+
+plt.bar(df['Student ID'].astype(str),df['Average'],color='purple')
+plt.xlabel('All students')
+plt.ylabel('Total average')
+plt.legend(['Bar chart'])
+plt.title('BAR CHARt')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
