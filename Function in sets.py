@@ -1,0 +1,10 @@
+collection = set()
+collection.add(1)
+collection.add(2)
+collection.add(2)
+# collection.remove(2)
+print(collection)
+print(len(collection))
+print(collection.clear())
+coll = {"hello","bello","gello"}
+print(coll.pop())

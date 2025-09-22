@@ -1,0 +1,16 @@
+#marks = [22,55,66,88,65,454,657]
+marks=['A','g','s']
+#marks.append(5)
+marks.sort()
+print(marks)
+marks.sort(reverse=True)
+print(marks)
+marks.sort()
+print(marks)
+marks.reverse()
+print(marks)
+marks.insert(1,'H')
+marks.insert(3,'H')
+print(marks)
+marks.pop(2)
+print(marks)
